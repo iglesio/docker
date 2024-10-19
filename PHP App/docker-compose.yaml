@@ -1,0 +1,21 @@
+services:
+  web:
+    container_name: php_web
+    image: php:apache
+    ports:
+      - "8086:80"
+    volumes:
+      - /var/www/html:/var/www/html
+
+  db:
+    container_name: mysql_web
+    image: mariadb:latest
+    ports:
+      - 3306:3306
+    volumes:
+      - /var/lib/mysql:/var/lib/mysql
+    environment:
+     - MARIADB_ROOT_PASSWORD=test321
+     - MARIADB_USER=test
+     - MARIADB_PASSWORD=test123
+     - MARIADB_DATABASE=database_web
