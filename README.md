@@ -1,1 +1,1 @@
-### These are some labs a I did using docker.
+### These are some labs I did using docker.
